@@ -1,0 +1,1 @@
+INSERT INTO autos (modelo) VALUES('Toyota Tacoma');
