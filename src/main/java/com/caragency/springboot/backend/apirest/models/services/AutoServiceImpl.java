@@ -14,11 +14,32 @@ public class AutoServiceImpl implements IAutoService {
 
 	@Autowired
 	private IAutoDao autoDao;
-	
+
 	@Override
 	@Transactional(readOnly = true)
-	public List<Auto> findAll(){
+	public List<Auto> findAll() {
 		return (List<Auto>) autoDao.findAll();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Auto findById(Long id) {
+		// TODO Auto-generated method stub
+		return autoDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Auto save(Auto auto) {
+		// TODO Auto-generated method stub
+		return autoDao.save(auto);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		autoDao.deleteById(id);
+
 	}
 
 }

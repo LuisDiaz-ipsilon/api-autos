@@ -25,6 +25,13 @@ public class Auto implements Serializable {
 
 	@Column
 	private String modelo;
+	
+	//En caso de que la entidad tenga algun campo de fecha podemos usar el siguiente metodo:
+	/*
+	 * @PrePersist
+	 * public void prePersist(){
+	 * campoFecha = new Date();
+	 * */
 
 	public Long getId_auto() {
 		return idAuto;
