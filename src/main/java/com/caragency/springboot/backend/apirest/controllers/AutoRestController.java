@@ -19,7 +19,7 @@ import com.caragency.springboot.backend.apirest.models.entity.Auto;
 import com.caragency.springboot.backend.apirest.models.services.IAutoService;
 
 //colocar en la anotacion crossOrigin (origins = {"http://localhost:4200"}) para especificar el origen
-@CrossOrigin(origins = {"http://localhost:4200"})
+//@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class AutoRestController {
